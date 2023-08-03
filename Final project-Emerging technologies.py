@@ -20,7 +20,7 @@ if x == 1:
     print("--------")
     a = float(input("Enter number 1 = "))
     b = float(input("Enter number 2 = "))
-    w = a+b 
+    w = a+b
     print("The addition of",a, "and" ,b, "is" ,w)
 elif x == 2:
     print("SUBTRACTION")
