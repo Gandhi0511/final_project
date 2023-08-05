@@ -11,7 +11,13 @@ print("Press 8 for natural exponent")
 print("Press 9 for trignometric values")
 print("Press 10 for factorial")
 print("Press 11 for area of circle")
-print("Press 12 for area of square")
+print("Press 12 for pound to kilogram")
+print("Press 13 for centimeter to inches")
+print("Press 14 for celsius to fahrenheit")
+print("Press 15 for square feet to acres")
+print("Press 16 for sugar to calories")
+print("Press 17 for kilometers to miles")
+print("Press 18 for square root")
 
 x = int(input("The number you pressed is: "))
 
@@ -157,18 +163,93 @@ elif x == 11:
         except ValueError:
             print("Error: Please enter a valid number for the radius.")
 elif x == 12:
-    print("AREA OF SQUARE")
-    print("--------------")
+    print("POUND TO KILOGRAM ")
+    print("-----------------")
 
 
-    def square_area(side_length):
-        return side_length * side_length
+    def pounds_to_kilograms(pounds):
+        kilograms = pounds * 0.45359237
+        return kilograms
+
+
+    pounds = float(input("Enter weight in pounds: "))
+    kilograms = pounds_to_kilograms(pounds)
+    print(f"{pounds} pounds is approximately {kilograms:.2f} kilograms")
+
+elif x == 13:
+    print("CENTIMETER TO INCHES")
+    print("--------------------")
+
+
+    def cm_to_inches(cm):
+        inches = cm / 2.54
+        return inches
+
+
+    cm = float(input("Enter length in centimeters: "))
+    inches = cm_to_inches(cm)
+    print(f"{cm} centimeters is approximately {inches:.2f} inches")
+
+elif x == 14:
+    print("CELSIUS TO FAHRENHIET")
+    print("--------------------")
+
+
+    def celsius_to_fahrenheit(celsius):
+        fahrenheit = (celsius * 9 / 5) + 32
+        return fahrenheit
 
 
     # Example usage:
-    side_length = float(input("Enter the side of square: "))
-    area = square_area(side_length)
-    print("The area of the square with side length", side_length, "is", area)
+    celsius = float(input("Enter temperature in Celsius: "))
+    fahrenheit = celsius_to_fahrenheit(celsius)
+    print(f"{celsius} degrees Celsius is approximately {fahrenheit:.2f} degrees Fahrenheit")
+elif x == 15:
+    print("SQUARE FEET TO ACRES")
+    print("--------------------")
+
+
+    def square_feet_to_acres(square_feet):
+        acres = square_feet / 43560
+        return acres
+
+    square_feet = float(input("Enter area in square feet: "))
+    acres = square_feet_to_acres(square_feet)
+    print(f"{square_feet} square feet is approximately {acres:.4f} acres")
+
+elif x == 16:
+    print("SUGAR TO CALORIES")
+    print("--------------------")
+
+
+    def sugar_to_calories(sugar_grams):
+        calories = sugar_grams * 4
+        return calories
+
+    sugar_grams = float(input("Enter the amount of sugar in grams: "))
+    calories = sugar_to_calories(sugar_grams)
+    print(f"{sugar_grams} grams of sugar is approximately {calories:.2f} calories")
+
+elif x == 17:
+    print("KILOMETERS TO MILES")
+    print("--------------------")
+
+
+    def kilometers_to_miles(kilometers):
+        miles = kilometers * 0.621371
+        return miles
+
+
+    kilometers = float(input("Enter distance in kilometers: "))
+    miles = kilometers_to_miles(kilometers)
+    print(f"{kilometers} kilometers is approximately {miles:.2f} miles")
+
+elif x == 18:
+    print("SQUARE ROOT")
+    print("-----------")
+    number = float(input("Enter a number: "))
+    square_root = number ** 0.5
+    print(f"The square root of {number} is {square_root:.2f}")
 
 else:
     print("Enter a valid option")
